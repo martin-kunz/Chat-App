@@ -1,4 +1,4 @@
-# <ins>Chat App:</ins>
+# <ins>Chat App</ins>
 
 #### <ins>General Information:</ins>
 Chat App is a group chat that allows multiple users to communicate with each other in real time. This project was developed during my bachelor's degree and is one of my first major software projects.<br><br>
