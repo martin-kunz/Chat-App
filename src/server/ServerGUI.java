@@ -29,8 +29,7 @@ public class ServerGUI {
 
 
 	/**
-	 * Constructor for ServerGUI.
-	 * Initializes the GUI components.
+	 * Constructor for ServerGUI. Initializes the GUI components.
 	 */
 	public ServerGUI() {
 		initialize();
@@ -42,7 +41,7 @@ public class ServerGUI {
 	 */
 	private void initialize() {
 		
-		//neuen Frame erstellen
+		//New frame
 		window = new JFrame();
 		window.setTitle("Server");
 		window.setBounds(100, 100, 600, 700);
@@ -59,7 +58,7 @@ public class ServerGUI {
 		window.getContentPane().add(portNumber);
 		portNumber.setColumns(10);
 		
-		//Start Button
+		//Start-Button
 		start = new JButton("Start");
 		start.setBounds(287, 627, 89, 23);
 		window.getContentPane().add(start);
@@ -110,7 +109,7 @@ public class ServerGUI {
 			}
 		});
 	
-		//Beenden-Button
+		//Terminate-Button
 		terminate = new JButton("Terminate");
 		terminate.setBounds(485, 627, 89, 23);
 		window.getContentPane().add(terminate);
@@ -124,7 +123,7 @@ public class ServerGUI {
 			}
 		});
 		
-		//Chatverlauf-Label
+		//Chat-Label
 		chat = new JLabel("Chat:");
 		chat.setBounds(10, 59, 46, 14);
 		window.getContentPane().add(chat);
@@ -142,7 +141,7 @@ public class ServerGUI {
 		chatTextArea.setLineWrap(true);
 		scrollbar.setViewportView(chatTextArea);
 		
-		//Participant-Label/-Liste
+		//Participant-Label/-List
 		participantsList = new JLabel("Participants:");
 		participantsList.setBounds(365, 59, 112, 14);
 		window.getContentPane().add(participantsList);

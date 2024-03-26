@@ -22,8 +22,8 @@ public class Participants {
 
 
 	/**
-	 * Adds a participant to the ArrayList. Ensures that the participant list does not exceed a certain size
-	 * and that each participant has a unique name.
+	 * Adds a participant to the ArrayList. Ensures that the participant list does not exceed a certain size and that each participant has a unique name.
+	 *
 	 * @param p: The participant to be added.
 	 * @return boolean: Returns true if the participant is successfully added, otherwise false.
 	 */
@@ -43,6 +43,7 @@ public class Participants {
 
 	/**
 	 * Deletes a participant from the ArrayList.
+	 *
 	 * @param p: The participant to be removed.
 	 * @return boolean: Returns true if the participant is successfully deleted, otherwise false.
 	 */
@@ -59,6 +60,7 @@ public class Participants {
 
 	/**
 	 * Retrieves all participants.
+	 *
 	 * @return Array: Returns an array of all participants.
 	 */
 	public synchronized Participant[] allParticipants() {
@@ -75,6 +77,7 @@ public class Participants {
 
 	/**
 	 * Returns the size of the participants list.
+	 *
 	 * @return int: Returns the number of participants in the list.
 	 */
 	public synchronized int size() {

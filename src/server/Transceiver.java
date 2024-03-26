@@ -19,6 +19,7 @@ public class Transceiver {
 
 	/**
 	 * Sends a message over a PrintWriter.
+	 *
 	 * @param printWriter: The PrintWriter to send the message through.
 	 * @param message: The Message object containing the message to be sent.
 	 * @return String: Returns the string representation of the sent message.
@@ -32,6 +33,7 @@ public class Transceiver {
 	/**
 	 * Writes a message to the GUI chat area.
 	 * This method appends the provided message to the chat area in the server's GUI.
+	 *
 	 * @param message The message to be displayed in the chat area.
 	 */
 	public void writeInGUI(String message) {
@@ -73,6 +75,7 @@ public class Transceiver {
 	/**
 	 * Adds a participant to the GUI's participant list.
 	 * This method is used to update the server GUI with the name of a new participant.
+	 *
 	 * @param p: The name of the participant to be added to the list.
 	 */
 	public void writeInList(String p) {
@@ -83,6 +86,7 @@ public class Transceiver {
 	/**
 	 * Sends a message to all participants in the chat.
 	 * This method broadcasts a message to all connected clients, including the sender's name and the message content.
+	 *
 	 * @param message: The keyword for the type of message.
 	 * @param rest: The content of the message.
 	 * @param p: The participant who sent the message.
@@ -93,7 +97,7 @@ public class Transceiver {
 		String name = p.getName();
 		Participant[] part = ps.allParticipants();
 		Transceiver.message = new Message(message, name + ": " + rest);
-		Date zeit = new Date();
+		Date time = new Date();
 		SimpleDateFormat format = new SimpleDateFormat("HH:mm");
 		
 		for (int i = 0; i < part.length; i++) {
@@ -106,6 +110,6 @@ public class Transceiver {
 			}
 			send(printWriter, Transceiver.message);
 		}
-		return name + ": " + rest + " (" + format.format(zeit) + ")";
+		return name + ": " + rest + " (" + format.format(time) + ")";
 	}
 }

@@ -20,6 +20,7 @@ public class ClientGUI extends JFrame {
 
 	/**
 	 * Main method that initializes the GUI.
+	 *
 	 * @param args Command line arguments, not used in this application.
 	 */
 	public static void main(String[] args) {
@@ -96,7 +97,7 @@ public class ClientGUI extends JFrame {
 		window.add(connectButton);
 		connectButton.addActionListener(new ActionListener() {
 			/**
-			 * Anonyme Klasse f&uuml;r den Connect-Button
+			 * Anonymous class for the Connect button
 			 */
 			public void actionPerformed(ActionEvent ae) {
 				try {
@@ -110,8 +111,7 @@ public class ClientGUI extends JFrame {
 					br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
 					/**
-					 * Thread, sowie Start des Threads, f&uuml;r das Auslesen des Streams, zum Empfang von kommenden Nachrichten vom Server.
-					 *
+					 * Thread, as well as start of the thread, for reading the stream to receive upcoming messages from the server
 					 */
 					Thread readerThread = new Thread(new Runnable() {
 						public void run() {
@@ -134,7 +134,7 @@ public class ClientGUI extends JFrame {
 		window.add(disconnectButton);
 		disconnectButton.addActionListener(new ActionListener() {
 			/**
-			 * Anonyme Klasse f&uuml;r den Disconnect-Button, zum Trennen vom Server
+			 * Anonymous class for the disconnect button to disconnect from the server
 			 */
 			public void actionPerformed(ActionEvent ae) {
 				try {
@@ -144,7 +144,7 @@ public class ClientGUI extends JFrame {
 					disconnectButton.setEnabled(false);
 					modellingList.clear();
 				} catch (NullPointerException npe) {
-					transceiver.writeInGUI("Es besteht keine Verbindung zu einem Server. (" + npe + ")");
+					transceiver.writeInGUI("There is no connection to a server. (" + npe + ")");
 				}
 			}
 		});
@@ -188,7 +188,7 @@ public class ClientGUI extends JFrame {
 		window.add(sendButton);
 		sendButton.addActionListener(new ActionListener() {
 			/**
-			 * Anonynme Klasse f&uuml;r den Senden-Button von eingegeben Nachrichten
+			 * Anonymous class for the send button of entered messages
 			 */
 			public void actionPerformed(ActionEvent ae) {
 				try {
@@ -206,7 +206,7 @@ public class ClientGUI extends JFrame {
 		window.add(messageField);
 		messageField.addActionListener(new ActionListener() {
 			/**
-			 * Anonyme Klasse zum Senden von Nachrichten &uuml;ber das Eingabefield (Enter-Taste)
+			 * Anonymous class for sending messages via the input field
 			 */
 			public void actionPerformed(ActionEvent e) {
 				message = new Message("message", messageField.getText());

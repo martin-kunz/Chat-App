@@ -1,21 +1,22 @@
 package client;
 
-
 /**
- * Interface, welches Methoden f&uuml;r die Transceiver-Klasse bereitstellt
+ * Interface that provides methods for the Transceiver class
  */
 public interface Output {
-	
+
 	/**
-	 * F&uuml;gt der Liste der GUI einen (weiteren) Participant hinzu.
-	 * @param participant: String mit dem Participant-Namen
+	 * Adds another participant to the GUI list.
+	 *
+	 * @param participant: String containing the participant's name
 	 */
 	public void writeInList(String participant);
-	
+
 	/**
-	 * &Uuml;bermittelt die Nachrichten mit der aktuellen Uhrzeit in die Verlaufsanzeige-TextArea der GUI
-	 * @param message: Eingegebener Text, der in die TextArea der GUI geschrieben wird
+	 * Transmits the messages with the current time to the history display TextArea of the GUI.
+	 *
+	 * @param message: Entered text that is written into the GUI's TextArea
 	 */
 	public void writeInGUI(String message);
-	
+
 }
